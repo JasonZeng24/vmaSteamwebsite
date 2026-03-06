@@ -1,32 +1,8 @@
 [
     {
-        "date": "October 15, 2023",
-        "title": "Hackathon 2023",
-        "description": "Annual 24-hour coding competition...",
-        "link": "#"
-    },
-    {
-        "date": "November 5, 2023",
-        "title": "Tech Career Fair",
-        "description": "Meet representatives from top tech companies...",
-        "link": "#"
-    },
-    {
         "date": "May 1, 2024",
-        "title": "Mr Hum's Hackathon",
-        "description": "Mr Hum's Hackathon event.",
-        "link": "#"
-    },
-    {
-        "date": "October 30, 2023",
-        "title": "Technology Fair",
-        "description": "Welcome to join.",
-        "link": "#"
-    },
-    {
-        "date": "October 31, 2023",
-        "title": "School Science Fair",
-        "description": "School Science Fair event.",
+        "title": "Science Fair",
+        "description": "A science fair where people will have hackathons and collaborate with each other.",
         "link": "#"
     }
 ]
