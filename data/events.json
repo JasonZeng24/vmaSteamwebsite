@@ -1,1 +1,14 @@
-
+[
+    {
+        "date": "October 15, 2023",
+        "title": "Hackathon 2023",
+        "description": "Annual 24-hour coding competition...",
+        "link": "#"
+    },
+    {
+        "date": "November 5, 2023",
+        "title": "Tech Career Fair",
+        "description": "Meet representatives from top tech companies...",
+        "link": "#"
+    }
+]
