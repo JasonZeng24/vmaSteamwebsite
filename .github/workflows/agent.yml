@@ -1,0 +1,38 @@
+name: Run AI Agent
+on:
+  workflow_dispatch:
+    inputs:
+      request:
+        description: '你想要更新的內容'
+        required: true
+        default: '新增一個活動'
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install google-genai python-dotenv
+
+      - name: Run Agent
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: python agent.py "${{ github.event.inputs.request }}"
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/events.json
+          git commit -m "chore: auto-update via GitHub Action"
+          git push
