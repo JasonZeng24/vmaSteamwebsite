@@ -2,44 +2,40 @@ import streamlit as st
 import json
 from google import genai
 import os
+from github import Github  # <--- 新增這個
 
-# 讀取 Secret
-api_key = st.secrets.get("GOOGLE_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+# 讀取 Secrets
+api_key = st.secrets.get("GOOGLE_API_KEY")
+github_token = st.secrets.get("GITHUB_TOKEN")
+admin_pw = st.secrets.get("ADMIN_PASSWORD")
+
 client = genai.Client(api_key=api_key)
 
-st.title("STEAM Dept Admin Dashboard")
-st.subheader("Manage Activities")
+# 密碼檢查
+input_pw = st.text_input("Admin Password", type="password")
 
-# 簡單密碼保護
-admin_pw = st.text_input("Admin Password", type="password")
-secret_pw = st.secrets.get("ADMIN_PASSWORD") or "default_pw"
-
-if admin_pw == secret_pw:
-    user_request = st.text_area("What do you want to update? (e.g., Add a new hackathon in May)")
-    
+if input_pw == admin_pw:
+    user_request = st.text_area("Update Request:")
     if st.button("Update Website"):
-        with st.spinner("AI Agent is working..."):
-            with open('data/events.json', 'r', encoding='utf-8') as f:
-                data = json.load(f)
+        with st.spinner("AI is updating GitHub..."):
+            # 1. 先用 GitHub API 抓出舊檔案
+            g = Github(github_token)
+            repo = g.get_repo("JasonZeng24/vmaSteamwebsite")
+            contents = repo.get_contents("data/events.json")
+            current_json_str = contents.decoded_content.decode()
             
-            # 強制要求英文輸出
-            prompt = f"""
-            Current JSON: {json.dumps(data)}
-            Request: {user_request}
-            Please process this request. IMPORTANT: Output the result in ENGLISH only and return valid JSON.
-            """
-            
+            # 2. 讓 AI 修改
             response = client.models.generate_content(
-                model='gemini-3.1-flash-lite-preview', # 用這個最新的模型
-                contents=prompt,
+                model='gemini-1.5-flash',
+                contents=f"Update this JSON: {current_json_str} with: {user_request}",
                 config={"response_mime_type": "application/json"}
             )
             
-            new_data = json.loads(response.text)
-            with open('data/events.json', 'w', encoding='utf-8') as f:
-                json.dump(new_data, f, indent=4, ensure_ascii=False)
-            
-            st.success("Success! Data updated locally.")
-else:
-    if admin_pw:
-        st.error("Wrong password!")
+            # 3. 寫回 GitHub (這一步直接更新你的 Repo！)
+            repo.update_file(
+                path=contents.path,
+                message="chore: auto-update via Streamlit dashboard",
+                content=response.text,
+                sha=contents.sha
+            )
+            st.success("GitHub updated successfully! Your website will update in a minute.")
