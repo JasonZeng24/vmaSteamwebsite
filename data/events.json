@@ -1,8 +1,6 @@
-[
-    {
-        "date": "May 1, 2024",
-        "title": "Science Fair",
-        "description": "A science fair where people will have hackathons and collaborate with each other.",
-        "link": "#"
-    }
-]
+{
+    "date": "May 1, 2024",
+    "title": "Science Fair",
+    "description": "A science fair where people will have hackathons and collaborate with each other.",
+    "link": "#"
+}
