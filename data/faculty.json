@@ -1,1 +1,42 @@
-
+[
+  {
+    "name": "Jason Hum",
+    "role": "Department Chair",
+    "bio": "Leading our department with vision and expertise in advanced computing concepts and educational leadership. With over 15 years of experience in both industry and academia, Jason specializes in distributed systems and cloud computing.",
+    "education": "Ph.D. in Computer Science, Stanford University",
+    "email": "jhum@school.edu",
+    "contactLink": "Research Publications",
+    "contactIcon": "fas fa-book",
+    "icon": "fas fa-user-tie"
+  },
+  {
+    "name": "Harry",
+    "role": "Programming & Algorithms",
+    "bio": "Specializing in data structures, algorithms, and competitive programming. Leads our coding competition teams to national championships. Former software engineer at Google with expertise in high-performance computing.",
+    "education": "M.S. in Computer Science, MIT",
+    "email": "harry@school.edu",
+    "contactLink": "GitHub",
+    "contactIcon": "fab fa-github",
+    "icon": "fas fa-code"
+  },
+  {
+    "name": "Joey",
+    "role": "AI & Robotics",
+    "bio": "Expert in artificial intelligence, machine learning, and robotics. Leads our award-winning robotics team. Research focuses on computer vision and autonomous systems. Previously worked at NASA's Jet Propulsion Laboratory.",
+    "education": "Ph.D. in Robotics, Carnegie Mellon",
+    "email": "joey@school.edu",
+    "contactLink": "Research Lab",
+    "contactIcon": "fas fa-flask",
+    "icon": "fas fa-robot"
+  },
+  {
+    "name": "Gabriel",
+    "role": "Digital Arts & Design",
+    "bio": "Bridging technology and creativity with expertise in digital media, UX/UI design, and interactive art. Professional background includes game design and animation at major studios. Exhibits digital art internationally.",
+    "education": "M.F.A. in Digital Arts, RISD",
+    "email": "gabriel@school.edu",
+    "contactLink": "Portfolio",
+    "contactIcon": "fas fa-palette",
+    "icon": "fas fa-paint-brush"
+  }
+]
