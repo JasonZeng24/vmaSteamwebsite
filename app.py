@@ -1,64 +1,77 @@
 import streamlit as st
 import json
 from google import genai
-import os
 from github import Github
 
-# --- 1. 設定與讀取 ---
-# 確保這些 KEY 在 Streamlit Cloud 的 Secrets 裡面都有設定
+# --- 1. 設定 ---
 api_key = st.secrets.get("GOOGLE_API_KEY")
 github_token = st.secrets.get("GITHUB_TOKEN")
 admin_pw = st.secrets.get("ADMIN_PASSWORD")
 
-# 初始化 Gemini Client (使用新版 SDK)
 client = genai.Client(api_key=api_key)
 
-# --- 2. 介面 ---
+# 檔案路徑對應表
+FILE_MAP = {
+    "Events": "data/events.json",
+    "Courses": "data/courses.json",
+    "Faculty": "data/faculty.json"
+}
+
 st.title("🚀 STEAM Dept Admin Dashboard")
-st.subheader("Manage Activities")
 
 # 密碼檢查
 input_pw = st.text_input("Admin Password", type="password")
 
 if input_pw == admin_pw:
-    user_request = st.text_area("What do you want to update? (e.g., Add a new hackathon in May)")
+    # 選擇要更新的檔案
+    target_category = st.selectbox("Select which section to update:", list(FILE_MAP.keys()))
+    file_path = FILE_MAP[target_category]
+    
+    user_request = st.text_area(f"What do you want to update in {target_category}?")
     
     if st.button("Update Website"):
         if not user_request:
             st.warning("Please enter a request.")
         else:
-            with st.spinner("AI Agent is working..."):
+            with st.spinner(f"Updating {target_category}..."):
                 try:
-                    # 1. 從 GitHub 抓檔案
                     g = Github(github_token)
                     repo = g.get_repo("JasonZeng24/vmaSteamwebsite")
-                    contents = repo.get_contents("data/events.json")
+                    contents = repo.get_contents(file_path)
                     current_json_str = contents.decoded_content.decode()
                     
-                    # 2. AI 思考與處理 (使用你指定的 3.1 模型)
+                    # AI Prompt 優化：明確告訴模型它在處理哪個檔案
                     prompt = f"""
+                    You are a data management assistant for a website.
+                    Context: You are updating the '{target_category}' section.
                     Current JSON data: {current_json_str}
                     Request: {user_request}
-                    Please process this request. 
-                    IMPORTANT: Output the result in ENGLISH only and return valid JSON format ONLY. 
-                    No explanation, no markdown backticks.
+                    
+                    Please process this request.
+                    IMPORTANT: 
+                    1. Output ONLY valid JSON.
+                    2. Keep the original schema/structure.
+                    3. Do not include markdown backticks or explanations.
                     """
                     
                     response = client.models.generate_content(
-                        model='gemini-3.1-flash-lite-preview', 
+                        model='gemini-2.0-flash', # 建議改用 2.0-flash 或 1.5-flash，穩定性高
                         contents=prompt,
                         config={"response_mime_type": "application/json"}
                     )
                     
-                    # 3. 推送回 GitHub
+                    # 簡單的 JSON 校驗
+                    new_data = json.loads(response.text)
+                    final_json_str = json.dumps(new_data, indent=4)
+                    
                     repo.update_file(
-                        path=contents.path,
-                        message="chore: auto-update via Streamlit dashboard",
-                        content=response.text,
+                        path=file_path,
+                        message=f"chore: auto-update {target_category} via dashboard",
+                        content=final_json_str,
                         sha=contents.sha
                     )
                     
-                    st.success("✅ GitHub updated successfully! Your website will update in a minute.")
+                    st.success(f"✅ {target_category} updated successfully!")
                 except Exception as e:
                     st.error(f"❌ Error occurred: {e}")
 else:
