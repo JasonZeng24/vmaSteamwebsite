@@ -10,5 +10,11 @@
         "title": "Mr Hum's Event",
         "description": "An event hosted by Mr Hum.",
         "link": "#"
+    },
+    {
+        "date": "October 10, 2024",
+        "title": "Bio Update",
+        "description": "Official update to the professional biography.",
+        "link": "#"
     }
 ]
