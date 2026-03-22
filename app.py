@@ -55,9 +55,9 @@ if input_pw == admin_pw:
                     """
                     
                     response = client.models.generate_content(
-                        model='gemini-2.0-flash', # 建議改用 2.0-flash 或 1.5-flash，穩定性高
-                        contents=prompt,
-                        config={"response_mime_type": "application/json"}
+                    model='gemini-3.1-flash-lite', 
+                    contents=prompt,
+                    config={"response_mime_type": "application/json"}
                     )
                     
                     # 簡單的 JSON 校驗
