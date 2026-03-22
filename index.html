@@ -868,74 +868,8 @@
     <section id="faculty">
         <div class="container">
             <h2 class="section-title">Our Faculty</h2>
-            <div class="faculty-container">
-                <!-- Department Chair -->
-                <div class="faculty-card">
-                    <div class="faculty-img">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Jason Hum</h3>
-                        <span class="role">Department Chair</span>
-                        <p>Leading our department with vision and expertise in advanced computing concepts and educational leadership. With over 15 years of experience in both industry and academia, Jason specializes in distributed systems and cloud computing.</p>
-                        <p><strong>Education:</strong> Ph.D. in Computer Science, Stanford University</p>
-                        <div class="faculty-contact">
-                            <a href="#"><i class="fas fa-envelope"></i> jhum@school.edu</a>
-                            <a href="#"><i class="fas fa-book"></i> Research Publications</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Teacher 1 -->
-                <div class="faculty-card">
-                    <div class="faculty-img">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Harry</h3>
-                        <span class="role">Programming & Algorithms</span>
-                        <p>Specializing in data structures, algorithms, and competitive programming. Leads our coding competition teams to national championships. Former software engineer at Google with expertise in high-performance computing.</p>
-                        <p><strong>Education:</strong> M.S. in Computer Science, MIT</p>
-                        <div class="faculty-contact">
-                            <a href="#"><i class="fas fa-envelope"></i> harry@school.edu</a>
-                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Teacher 2 -->
-                <div class="faculty-card">
-                    <div class="faculty-img">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Joey</h3>
-                        <span class="role">AI & Robotics</span>
-                        <p>Expert in artificial intelligence, machine learning, and robotics. Leads our award-winning robotics team. Research focuses on computer vision and autonomous systems. Previously worked at NASA's Jet Propulsion Laboratory.</p>
-                        <p><strong>Education:</strong> Ph.D. in Robotics, Carnegie Mellon</p>
-                        <div class="faculty-contact">
-                            <a href="#"><i class="fas fa-envelope"></i> joey@school.edu</a>
-                            <a href="#"><i class="fas fa-flask"></i> Research Lab</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Teacher 3 -->
-                <div class="faculty-card">
-                    <div class="faculty-img">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Gabriel</h3>
-                        <span class="role">Digital Arts & Design</span>
-                        <p>Bridging technology and creativity with expertise in digital media, UX/UI design, and interactive art. Professional background includes game design and animation at major studios. Exhibits digital art internationally.</p>
-                        <p><strong>Education:</strong> M.F.A. in Digital Arts, RISD</p>
-                        <div class="faculty-contact">
-                            <a href="#"><i class="fas fa-envelope"></i> gabriel@school.edu</a>
-                            <a href="#"><i class="fas fa-palette"></i> Portfolio</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="faculty-container" id="faculty-container">
+                <!-- Dynamically populated from data/faculty.json -->
             </div>
         </div>
     </section>
@@ -944,67 +878,8 @@
     <section id="courses">
         <div class="container">
             <h2 class="section-title">Featured Courses</h2>
-            <div class="courses-container">
-                <div class="course-card">
-                    <h3>Advanced Programming</h3>
-                    <p>Deep dive into software development with Java, Python, and C++. Focus on algorithms and data structures.</p>
-                    <div class="course-details">
-                        <div><i class="fas fa-clock"></i> Full Year Course</div>
-                        <div><i class="fas fa-star"></i> Prerequisites: Intro to CS</div>
-                        <div><i class="fas fa-code"></i> Languages: Java, Python, C++</div>
-                        <div><i class="fas fa-graduation-cap"></i> AP Credit Available</div>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <h3>Artificial Intelligence</h3>
-                    <p>Explore machine learning, neural networks, and AI applications in the modern world.</p>
-                    <div class="course-details">
-                        <div><i class="fas fa-clock"></i> Semester Course</div>
-                        <div><i class="fas fa-star"></i> Prerequisites: Advanced Programming</div>
-                        <div><i class="fas fa-code"></i> Languages: Python, R</div>
-                        <div><i class="fas fa-brain"></i> Topics: ML, Neural Networks, NLP</div>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <h3>Web Development</h3>
-                    <p>Learn full-stack development with HTML, CSS, JavaScript, and modern frameworks.</p>
-                    <div class="course-details">
-                        <div><i class="fas fa-clock"></i> Semester Course</div>
-                        <div><i class="fas fa-star"></i> Prerequisites: Intro to Programming</div>
-                        <div><i class="fas fa-code"></i> Technologies: React, Node.js, MongoDB</div>
-                        <div><i class="fas fa-laptop-code"></i> Project-Based Learning</div>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <h3>Digital Arts & Media</h3>
-                    <p>Combine creativity and technology to produce digital art, animations, and interactive media.</p>
-                    <div class="course-details">
-                        <div><i class="fas fa-clock"></i> Full Year Course</div>
-                        <div><i class="fas fa-star"></i> No Prerequisites Required</div>
-                        <div><i class="fas fa-paint-brush"></i> Tools: Photoshop, Blender, Unity</div>
-                        <div><i class="fas fa-desktop"></i> Digital Portfolio Development</div>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <h3>Cybersecurity</h3>
-                    <p>Learn to protect systems and networks from digital attacks and understand ethical hacking principles.</p>
-                    <div class="course-details">
-                        <div><i class="fas fa-clock"></i> Semester Course</div>
-                        <div><i class="fas fa-star"></i> Prerequisites: Networking Fundamentals</div>
-                        <div><i class="fas fa-shield-alt"></i> Topics: Encryption, Pen Testing</div>
-                        <div><i class="fas fa-certificate"></i> Prepares for Security+ Certification</div>
-                    </div>
-                </div>
-                <div class="course-card">
-                    <h3>Data Science</h3>
-                    <p>Explore data analysis, visualization, and statistical modeling using real-world datasets.</p>
-                    <div class="course-details">
-                        <div><i class="fas fa-clock"></i> Semester Course</div>
-                        <div><i class="fas fa-star"></i> Prerequisites: Statistics, Programming</div>
-                        <div><i class="fas fa-chart-bar"></i> Tools: Python, Pandas, Tableau</div>
-                        <div><i class="fas fa-database"></i> Real-World Data Projects</div>
-                    </div>
-                </div>
+            <div class="courses-container" id="courses-container">
+                <!-- Dynamically populated from data/courses.json -->
             </div>
         </div>
     </section>
@@ -1206,25 +1081,8 @@
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
     <script>
-        fetch('data/events.json')
-                .then(response => response.json())
-                .then(events => {
-                    const container = document.getElementById('events-container');
-                    container.innerHTML = ''; // 清空原本的 HTML
-                    events.forEach(event => {
-                        container.innerHTML += `
-                <div class="event-item">
-                    <div class="event-content">
-                        <div class="event-date">${event.date}</div>
-                        <h3>${event.title}</h3>
-                        <p>${event.description}</p>
-                        <a href="${event.link}" class="cta-button">Register Now</a>
-                    </div>
-                </div>
-            `;
-                    });
-                });
         // Matrix background effect
         const canvas = document.getElementById('matrix-bg');
         const ctx = canvas.getContext('2d');

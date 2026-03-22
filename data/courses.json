@@ -1,1 +1,68 @@
-
+[
+  {
+    "title": "Advanced Programming",
+    "description": "Deep dive into software development with Java, Python, and C++. Focus on algorithms and data structures.",
+    "duration": "Full Year Course",
+    "prerequisites": "Intro to CS",
+    "languages": "Java, Python, C++",
+    "languagesIcon": "fas fa-code",
+    "extra": "AP Credit Available",
+    "extraIcon": "fas fa-graduation-cap",
+    "icon": "fas fa-code"
+  },
+  {
+    "title": "Artificial Intelligence",
+    "description": "Explore machine learning, neural networks, and AI applications in the modern world.",
+    "duration": "Semester Course",
+    "prerequisites": "Advanced Programming",
+    "languages": "Python, R",
+    "languagesIcon": "fas fa-code",
+    "extra": "Topics: ML, Neural Networks, NLP",
+    "extraIcon": "fas fa-brain",
+    "icon": "fas fa-brain"
+  },
+  {
+    "title": "Web Development",
+    "description": "Learn full-stack development with HTML, CSS, JavaScript, and modern frameworks.",
+    "duration": "Semester Course",
+    "prerequisites": "Intro to Programming",
+    "languages": "React, Node.js, MongoDB",
+    "languagesIcon": "fas fa-code",
+    "extra": "Project-Based Learning",
+    "extraIcon": "fas fa-laptop-code",
+    "icon": "fas fa-globe"
+  },
+  {
+    "title": "Digital Arts & Media",
+    "description": "Combine creativity and technology to produce digital art, animations, and interactive media.",
+    "duration": "Full Year Course",
+    "prerequisites": "No Prerequisites Required",
+    "languages": "Photoshop, Blender, Unity",
+    "languagesIcon": "fas fa-paint-brush",
+    "extra": "Digital Portfolio Development",
+    "extraIcon": "fas fa-desktop",
+    "icon": "fas fa-paint-brush"
+  },
+  {
+    "title": "Cybersecurity",
+    "description": "Learn to protect systems and networks from digital attacks and understand ethical hacking principles.",
+    "duration": "Semester Course",
+    "prerequisites": "Networking Fundamentals",
+    "languages": "Encryption, Pen Testing",
+    "languagesIcon": "fas fa-shield-alt",
+    "extra": "Prepares for Security+ Certification",
+    "extraIcon": "fas fa-certificate",
+    "icon": "fas fa-shield-alt"
+  },
+  {
+    "title": "Data Science",
+    "description": "Explore data analysis, visualization, and statistical modeling using real-world datasets.",
+    "duration": "Semester Course",
+    "prerequisites": "Statistics, Programming",
+    "languages": "Python, Pandas, Tableau",
+    "languagesIcon": "fas fa-chart-bar",
+    "extra": "Real-World Data Projects",
+    "extraIcon": "fas fa-database",
+    "icon": "fas fa-chart-bar"
+  }
+]
