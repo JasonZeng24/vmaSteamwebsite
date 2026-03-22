@@ -1,79 +1,134 @@
 [
-    {
-        "title": "Advanced Programming",
-        "description": "Deep dive into software development with Java, Python, and C++. Focus on algorithms and data structures.",
-        "duration": "Full Year Course",
-        "prerequisites": "Intro to CS",
-        "languages": "Java, Python, C++",
-        "languagesIcon": "fas fa-code",
-        "extra": "AP Credit Available",
-        "extraIcon": "fas fa-graduation-cap",
-        "icon": "fas fa-code"
-    },
-    {
-        "title": "Artificial Intelligence",
-        "description": "Explore machine learning, neural networks, and AI applications in the modern world.",
-        "duration": "Semester Course",
-        "prerequisites": "Advanced Programming",
-        "languages": "Python, R",
-        "languagesIcon": "fas fa-code",
-        "extra": "Topics: ML, Neural Networks, NLP",
-        "extraIcon": "fas fa-brain",
-        "icon": "fas fa-brain"
-    },
-    {
-        "title": "Web Development",
-        "description": "Learn full-stack development with HTML, CSS, JavaScript, and modern frameworks.",
-        "duration": "Semester Course",
-        "prerequisites": "Intro to Programming",
-        "languages": "React, Node.js, MongoDB",
-        "languagesIcon": "fas fa-code",
-        "extra": "Project-Based Learning",
-        "extraIcon": "fas fa-laptop-code",
-        "icon": "fas fa-globe"
-    },
-    {
-        "title": "Digital Arts & Media",
-        "description": "Combine creativity and technology to produce digital art, animations, and interactive media.",
-        "duration": "Full Year Course",
-        "prerequisites": "No Prerequisites Required",
-        "languages": "Photoshop, Blender, Unity",
-        "languagesIcon": "fas fa-paint-brush",
-        "extra": "Digital Portfolio Development",
-        "extraIcon": "fas fa-desktop",
-        "icon": "fas fa-paint-brush"
-    },
-    {
-        "title": "Cybersecurity",
-        "description": "Learn to protect systems and networks from digital attacks and understand ethical hacking principles.",
-        "duration": "Semester Course",
-        "prerequisites": "Networking Fundamentals",
-        "languages": "Encryption, Pen Testing",
-        "languagesIcon": "fas fa-shield-alt",
-        "extra": "Prepares for Security+ Certification",
-        "extraIcon": "fas fa-certificate",
-        "icon": "fas fa-shield-alt"
-    },
-    {
-        "title": "Data Science",
-        "description": "Explore data analysis, visualization, and statistical modeling using real-world datasets.",
-        "duration": "Semester Course",
-        "prerequisites": "Statistics, Programming",
-        "languages": "Python, Pandas, Tableau",
-        "languagesIcon": "fas fa-chart-bar",
-        "extra": "Real-World Data Projects",
-        "extraIcon": "fas fa-database",
-        "icon": "fas fa-chart-bar"
-    },
-    {
-        "title": "AP CSP",
-        "description": "An introduction to computer science principles and programming using JavaScript.",
-        "duration": "Full Year Course",
-        "prerequisites": "None",
-        "languages": "JavaScript",
-        "languagesIcon": "fas fa-code",
-        "extra": "AP Credit Available",
-        "extraIcon": "fas fa-graduation-cap",
-        "icon": "fas fa-laptop"
-    }
+  {
+    "title": "Information & Communication Technology",
+    "description": "Equips students with essential digital skills including computer hardware and software, information systems, file management, and office applications. Strong foundation for further IT studies.",
+    "duration": "Full Year | 10 Credits",
+    "prerequisites": "None Required",
+    "languages": "Digital Literacy, Office Apps, File Management",
+    "languagesIcon": "fas fa-laptop",
+    "extra": "LIGHT Workload",
+    "extraIcon": "fas fa-feather",
+    "icon": "fas fa-laptop"
+  },
+  {
+    "title": "Information Technology",
+    "description": "Introduces basic computing and technology concepts including number systems, communications, computer architecture, and programming basics. Builds algorithmic thinking and data processing skills.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "None Required",
+    "languages": "Binary/Hex, Logic, Problem Solving",
+    "languagesIcon": "fas fa-microchip",
+    "extra": "LIGHT Workload",
+    "extraIcon": "fas fa-feather",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "title": "Programming with Python",
+    "description": "Learn one of the world's most popular programming languages. Covers variables, conditions, loops, functions, and efficiency concepts — ideal for beginners and future AP Computer Science Principles students.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "None Required",
+    "languages": "Python",
+    "languagesIcon": "fas fa-code",
+    "extra": "Great for Beginners",
+    "extraIcon": "fas fa-star",
+    "icon": "fas fa-code"
+  },
+  {
+    "title": "Programming with Java",
+    "description": "Basic introduction to Java building a foundation for AP Computer Science A. Students learn data types, logic, control structures, iterative processes, and objects — includes weekly lab work.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "B+ in CSE202 or Algebra II, or department permission",
+    "languages": "Java",
+    "languagesIcon": "fas fa-code",
+    "extra": "Weekly Labs Included",
+    "extraIcon": "fas fa-flask",
+    "icon": "fas fa-code"
+  },
+  {
+    "title": "Web Design & Internet",
+    "description": "Explore web design using HTML, CSS, and responsive design techniques while discovering how the Internet works — its architecture, protocols, and societal impact.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "None Required",
+    "languages": "HTML, CSS, Responsive Design",
+    "languagesIcon": "fas fa-globe",
+    "extra": "Project-Based",
+    "extraIcon": "fas fa-palette",
+    "icon": "fas fa-globe"
+  },
+  {
+    "title": "Introduction to Artificial Intelligence",
+    "description": "Engaging introduction to AI covering machine learning, natural language processing, neural networks, and computer vision with hands-on experience. Critically explores ethical implications of AI.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "CSE302, CSE303, or CSE304 with B+ or higher",
+    "languages": "Python, AI/ML Tools",
+    "languagesIcon": "fas fa-brain",
+    "extra": "Hands-On AI Projects",
+    "extraIcon": "fas fa-brain",
+    "icon": "fas fa-brain"
+  },
+  {
+    "title": "AP Computer Science A",
+    "description": "Year-long AP course focused on object-oriented programming in Java. Covers common algorithms, built-in classes, modularity, and problem-solving. Students are expected to take the AP CS A exam in May.",
+    "duration": "Full Year | 10 Credits",
+    "prerequisites": "B+ in any Math course AND B+ in CSE202, CSE302, or CSE304",
+    "languages": "Java",
+    "languagesIcon": "fas fa-code",
+    "extra": "AP Exam Required | HEAVY",
+    "extraIcon": "fas fa-graduation-cap",
+    "icon": "fas fa-java"
+  },
+  {
+    "title": "AP Computer Science Principles",
+    "description": "Introduces foundational components of computer science and computational thinking. Students develop innovative computation artifacts and explore the vital impacts computing has on people and society.",
+    "duration": "Full Year | 10 Credits",
+    "prerequisites": "B+ in any English AND B+ in any Math AND A in CSE202, CSE304, or CSE302",
+    "languages": "Multiple / Cross-Curricular",
+    "languagesIcon": "fas fa-project-diagram",
+    "extra": "AP Exam Required | HEAVY",
+    "extraIcon": "fas fa-graduation-cap",
+    "icon": "fas fa-laptop-code"
+  },
+  {
+    "title": "Introduction to CAD",
+    "description": "Develop foundational Computer-Aided Design skills for 2D and 3D modeling. Topics include creation of parts, assemblies, and drawings using professional CAD software.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "None Required",
+    "languages": "CAD Software (2D & 3D)",
+    "languagesIcon": "fas fa-drafting-compass",
+    "extra": "LIGHT Workload",
+    "extraIcon": "fas fa-feather",
+    "icon": "fas fa-drafting-compass"
+  },
+  {
+    "title": "Design Thinking",
+    "description": "Foster creativity, empathy, and problem-solving through hands-on experiences tackling real-world challenges. Prepares students for EGR309 & EGR403 and cultivates an innovative mindset.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "None Required",
+    "languages": "Design Process, Prototyping",
+    "languagesIcon": "fas fa-lightbulb",
+    "extra": "Interdisciplinary",
+    "extraIcon": "fas fa-puzzle-piece",
+    "icon": "fas fa-lightbulb"
+  },
+  {
+    "title": "Programming with Electronics",
+    "description": "Introduces electronics basics using Arduino micro-computers along with manufacturing tools (soldering, laser cutting, 3D printing). Delivers interdisciplinary learning across Engineering, Science, and Art.",
+    "duration": "Semester | 5 Credits",
+    "prerequisites": "B+ or higher in CSE202",
+    "languages": "Arduino (C/C++), Soldering",
+    "languagesIcon": "fas fa-microchip",
+    "extra": "STEAM Projects",
+    "extraIcon": "fas fa-tools",
+    "icon": "fas fa-microchip"
+  },
+  {
+    "title": "Robotics Engineering",
+    "description": "Design, fabricate, assemble, and program competition robots for FIRST and VEX Robotics competitions. Students learn the Engineering Design Process, teamwork, and real-world robotics applications.",
+    "duration": "Full Year | 10 Credits",
+    "prerequisites": "Teacher Recommendation & Interview Required",
+    "languages": "RobotC / VEX Programming",
+    "languagesIcon": "fas fa-robot",
+    "extra": "Competition-Ready",
+    "extraIcon": "fas fa-trophy",
+    "icon": "fas fa-robot"
+  }
 ]
