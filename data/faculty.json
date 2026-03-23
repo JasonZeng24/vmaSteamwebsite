@@ -8,7 +8,7 @@
     "contactLink": "https://www.linkedin.com/in/jason-hum-6038523/",
     "contactIcon": "fab fa-linkedin",
     "icon": "fas fa-user-tie",
-    "image": "data/jason_hum.jpg"
+    "image": "jason_hum.jpg"
   },
   {
     "name": "Hiren Bhavsar",
@@ -19,6 +19,6 @@
     "contactLink": "https://www.linkedin.com/in/imhirenbhavsar/",
     "contactIcon": "fab fa-linkedin",
     "icon": "fas fa-code",
-    "image": "data/hiren_bhavsar.jpg"
+    "image": "hiren_bhavsar.jpg"
   }
 ]
