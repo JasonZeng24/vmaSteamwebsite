@@ -45,14 +45,14 @@ header {
 }
 
 nav {
-    display: flex;
+    
     justify-content: space-between;
-    align-items: center;
+    
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+    
+    
     gap: 10px;
 }
 
@@ -65,7 +65,7 @@ nav {
 }
 
 .nav-links {
-    display: flex;
+    
     gap: 2rem;
 }
 
@@ -99,10 +99,10 @@ nav {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    display: flex;
+    
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+    
     text-align: center;
     padding: 2rem;
     position: relative;
@@ -195,7 +195,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    align-items: center;
+    
 }
 
 .about-text h3 {
@@ -257,9 +257,9 @@ section {
 .faculty-img {
     height: 250px;
     background: linear-gradient(45deg, #0a192f, #112240);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    
+    
     position: relative;
     overflow: hidden;
 }
@@ -339,7 +339,7 @@ section {
 }
 
 .faculty-contact {
-    display: flex;
+    
     gap: 1rem;
     margin-top: 1rem;
     flex-wrap: wrap;
@@ -350,8 +350,8 @@ section {
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s;
-    display: flex;
-    align-items: center;
+    
+    
     gap: 0.5rem;
 }
 
@@ -398,8 +398,8 @@ section {
 }
 
 .course-details div {
-    display: flex;
-    align-items: center;
+    
+    
     gap: 0.5rem;
 }
 
@@ -409,7 +409,7 @@ section {
 
 /* Events Section */
 .events-container {
-    display: flex;
+    
     flex-direction: column;
     gap: 2rem;
     max-width: 800px;
@@ -421,7 +421,7 @@ section {
     padding: 2rem;
     border-radius: 10px;
     border: 1px solid rgba(100, 255, 218, 0.1);
-    display: flex;
+    
     gap: 2rem;
     transition: transform 0.3s;
 }
