@@ -2,7 +2,7 @@
 
 > Official website for the Vanke Meisha Academy (VMA) STEAM & Computer Science Department — a modern, single-page web application showcasing courses, faculty, events, and resources.
 
-🌐 **Live Site**: [vmasteam](https://jasonzeng24.github.io/vmaSteamwebsite/)) *(replace with your actual URL)*
+🌐 **Live Site**: [vmasteam](https://jasonzeng24.github.io/vmaSteamwebsite/)
 
 ---
 
