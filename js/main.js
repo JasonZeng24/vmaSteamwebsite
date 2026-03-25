@@ -26,7 +26,7 @@ fetch('data/faculty.json')
             container.innerHTML += `
                 <div class="faculty-card">
                     <div class="faculty-img">
-                        <i class="${member.icon}"></i>
+                        ${member.image ? `<img src="data/${member.image}" alt="${member.name}" style="width: 100%; height: 100%; object-fit: cover;">` : `<i class="${member.icon}"></i>`}
                     </div>
                     <div class="faculty-info">
                         <h3>${member.name}</h3>
