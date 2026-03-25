@@ -65,13 +65,12 @@ fetch('data/faculty.json')
         const container = document.getElementById('faculty-container');
         faculty.forEach(member => {
             const imgHtml = member.image 
-                ? `<img src="${member.image}" alt="${member.name}">`
+                ? `<img src="data/${member.image}" alt="${member.name}">`
                 : `<i class="${member.icon}"></i>`;
-            const hasImageClass = member.image ? ' has-image' : '';
             
             container.innerHTML += `
                 <div class="faculty-card">
-                    <div class="faculty-img${hasImageClass}">
+                    <div class="faculty-img${member.image ? " has-image" : ""}">
                         ${imgHtml}
                     </div>
                     <div class="faculty-info">
