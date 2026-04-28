@@ -126,16 +126,7 @@
             object-fit: cover;
             z-index: 0;
             opacity: 0.35;
-        }
-
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            opacity: 0.35;
+            pointer-events: none;
         }
 
         .hero-overlay {
@@ -886,12 +877,14 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <!-- Video Background -->
-        <iframe class="hero-video-bg"
-            src="https://www.youtube-nocookie.com/embed/TnwlT4t5_TI?autoplay=1&mute=1&loop=1&playlist=TnwlT4t5_TI&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&origin=https://jasonzeng24.github.io"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-        </iframe>
+                <video class="hero-video-bg"
+            src="data/hero.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            disablePictureInPicture>
+        </video>
         <div class="hero-content">
             <h1>STEAM & COMPUTER SCIENCE</h1>
             <p>Vanke Meisha Academy | Where Innovation Meets <span class="typed-text" id="typed-text"></span></p>
