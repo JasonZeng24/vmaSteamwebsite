@@ -110,4 +110,35 @@ fetch('data/courses.json')
         });
     });
 
-// Stats section - static display, no animation needed
+// Animate stats on scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const statsSection = document.querySelector('.about-stats');
+if (statsSection) {
+    observer.observe(statsSection);
+}
