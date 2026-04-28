@@ -119,6 +119,24 @@
         /* Hero Video Background */
         .hero-video-bg {
             position: absolute;
+            top: -60px;
+            left: 0;
+            width: calc(100% + 200px);
+            height: calc(100% + 120px);
+            z-index: 0;
+            opacity: 0.35;
+            pointer-events: none;
+            transform: scale(1.15);
+        }
+
+        /* Hide Bilibili player UI overlays */
+        .hero-video-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 80px;
+            z-index: 2;
+        }
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -877,9 +895,9 @@
     <section id="home" class="hero">
         <!-- Video Background -->
         <iframe class="hero-video-bg"
-            src="https://player.bilibili.com/player.html?bvid=BV1S6YvzmE9s&autoplay=1&muted=1&loop=1&controls=0&showinfo=0&danmaku=0"
+            src="https://player.bilibili.com/player.html?bvid=BV1S6YvzmE9s&autoplay=1&muted=1&loop=1&high_quality=1&danmaku=0&as_wide=1&noRecommend=1&hide_top_bar=1"
             frameborder="0"
-            allow="autoplay; encrypted-media"
+            allow="autoplay; encrypted-media; fullscreen"
             allowfullscreen>
         </iframe>
         <div class="hero-content">
